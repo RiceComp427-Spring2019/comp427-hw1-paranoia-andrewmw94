@@ -19,12 +19,13 @@ Your NetID is typically your initials and a numeric digit. That's
 what we need here.
 
 _If you contacted us in advance and we approved a late submission,
-please cut-and-paste the text from that email here._
+please cut-and-paste the text from that email here.**
 
 ## Problem 1
-- Scenario: {Grading}
+- Scenario: **Grading**
 - Assumptions:
   - This is something that I actually do, so my assumptions will be the set of true propositions for COMP 382.
+  - Among these assumptions, we're assuming the grading platform is "as secure as it will get." This hold because I don't have influence over canvas. 
 - Assets:
   - Approximately thirty undergrads and grad students with a passion for justice and a nose for illicit cooperation.
   - Approximately 8 hrs per week per TA (so 240 man hours per week).
@@ -43,30 +44,40 @@ please cut-and-paste the text from that email here._
   - Attempt to characterize problems into some small number of classes. Then have TA's communicate to attempt consistent grading and detect plagiarism. This is very hard to do in a robust way. Grades will probably have a fair amount of randomness due to subjective factors. Having enough assignments throughout the semester will hopefully cause the information to outweigh the noise.
 
 ## Problem 2
-- Scenario: {Stadium}
+- Scenario: **Stadium**
 - Assumptions:
   - With D1 schools spending up to 50 million dollars on their football teams in a given year, it seems evident that some people care about these teams a lot. The ultimate goal of each team is presumably to win the national championship game. We will assume that attempts to do this will not utilize resources on the nation-state level (e.g., satellites will not be used to spy on opposing teams' practices). We will not assume morality (i.e., we will assume that there is at least a small group of people that are happy to cheat to help a given team win.), but we will assume that there is no one willing to risk life in prison to hurt a given team (e.g., no assassination attempts).
 - Assets:
   - A small portion of the 50 million dollar budget. Let's say 5 million.
-  - A large staff, say 97 people not counting the players.
+  - A large staff, say 97 people not counting the players. We'll also assume we can hire a few new employees (say 3 people).
 - Threats:
-  - Disqualification. Anything from academic probation to performance enhancing drug use can disqualify a player.
-  - 
+  - We'll use www.yourteamcheats.com to find common ways teams cheat and try to cover those. Additionally, we'll try to look at new ways teams could use technology to cheat:
+  - Disqualification. Anything from academic probation to performance enhancing drug (PED) use can disqualify a player. NFL teams don't have academic probation, but PEDs have resulted in suspensions. While this would give some short-term benefit to our players, we will assume that the net result for our team is negative as such acts are likely to be detected and punished.
+  - Illicitly taping the other team. Games are open to the public, but practices are not supposed to be taped by opposing teams. Historically, this has been a person attending practice with a camcorder. We would also like to prevent people recording using cell phones and "fans" placing small cameras around the stadium prior to the practice.
+  - Placing radios in helmets would be useful, but it is illegal. We would like to detect any opposing team that uses such radios.
 - Countermeasures:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
+  - To deal with disqualification, we will encourage "appropriate" behavior by having our players shadowed. Note that this is already done at major schools (players have individual "tutors" ensuring they attend class etc.) so it does not cost additional resources. Hopefully this also discourages PED use. We won't *actually* perform drug tests because we don't want to catch our players. We just hope they don't get caught by anyone.
+  - To deal with taping, we would essentially need to prevent the use of electronics within the stadium. While we could use EMPs to destroy them, this would damage other systems and probably not be worth the cost. Instead, we can try to exclude non-team members from the stadium during practices and task a small number of team staff members to look for people holding cameras / phones during practice among the few people we do allow in the stadium. To deal with small cameras, we could assume they use common communication protocols and monitor for unusual signals. If these signals are detected, it should be possible to locate the source using a kalman filter or similar.
+  - Placing radios in helmets would be difficult to detect, but again monitoring for unusual signals could detect this form of cheating.
 
 ## Problem 3
-- Scenario: Your choice (give a brief explanation)
+- Scenario: **Research on My Computer**
 - Assumptions:
-  - explain_your_assumptions
+  - Again, this is a real scenario that I face, so my assumptions are the set of true statements concerning computer security at NASA.
+  - Specifically, we assume I'm powerless to change any security policies.
 - Assets:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
+  - My assets are myself, spending approximately 8 hours per day.
+  - Hardware I am given / bring. This includes a NASA desktop and my personal laptop.
+  - NASA has an internal network that is (hopefully) secure from the outside world. The NASA desktop is on this network. My personal laptop is connected to the world-wide web.
 - Threats:
-  - explanatory_paragraph 
-  - explanatory_paragraph ...
+  - Here, we will divide threats into two classes. First we will consider threats from overtly malicious entities. Then we will consider threats from the IT department.
+  - For overtly malicious entities, we have other actors (e.g., the Chinese) who apparently think NASA code is worth stealing. Based on my experience, these people are more to be pitied than feared, but I signed something saying I'd protect NASA secrets, so I'll get in trouble if I don't.
+  - The presumed attacks would be attempts to access the NASA network or to read secrets I place on a device connected to the world-wide web.
+  - Non-approved USB drives are forbidden at the workplace, but this rule is not generally followed. Hopefully all such drives are quarantined to their respective networks. (Personal drives only used with personal computers. NASA drives only with NASA computers.)
+  - For the IT department, the goal seems to be preventing anything from happening. If nothing happens then nothing bad happens. This approach is foolproof.
 - Countermeasures:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
+  - External software (e.g., Linux) is installed from NASA approved USB drives. I don't know how it got there, but that's not my fault. If my computer is compromised by this, then so is everyone else's, so the additional risk is negligible.
+  - Internal software is installed from internal servers. Again, if these are compromised, then my computer isn't going to make things worse.
+  - For some external software that is not hosted, I need to build it from source. Here I'm assuming that the software is not malicious, that the compiler I'm using is correct, and that the means of obtaining the software that I use is safe. The first assumption seems reasonable, because the software packages are widely used and the creators have no reason to expect them to be used at NASA. If the compiler provided by the USB stick is compromised, again I am not making things worse. The weakest point is probably my means of obtaining the software. I download it, comparing the hash against the reported hash for the download. This makes it unlikely that the software is compromised.
+  - In general, the theme here is "I'm not making things worse than they already are." This is a useful rule for figuring out what to worry about.
 
