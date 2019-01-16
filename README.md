@@ -64,20 +64,23 @@ please cut-and-paste the text from that email here.**
 - Scenario: **Research on My Computer**
 - Assumptions:
   - Again, this is a real scenario that I face, so my assumptions are the set of true statements concerning computer security at NASA.
-  - Specifically, we assume I'm powerless to change any security policies.
+  - Specifically, we assume I'm powerless to change any security policies implemented by IT.
 - Assets:
   - My assets are myself, spending approximately 8 hours per day.
   - Hardware I am given / bring. This includes a NASA desktop and my personal laptop.
   - NASA has an internal network that is (hopefully) secure from the outside world. The NASA desktop is on this network. My personal laptop is connected to the world-wide web.
+  - I also have access to very expensive hardware. Code I write can be run on this hardware, but it is not connected to a network while it runs.
 - Threats:
   - Here, we will divide threats into two classes. First we will consider threats from overtly malicious entities. Then we will consider threats from the IT department.
   - For overtly malicious entities, we have other actors (e.g., the Chinese) who apparently think NASA code is worth stealing. Based on my experience, these people are more to be pitied than feared, but I signed something saying I'd protect NASA secrets, so I'll get in trouble if I don't.
   - The presumed attacks would be attempts to access the NASA network or to read secrets I place on a device connected to the world-wide web.
   - Non-approved USB drives are forbidden at the workplace, but this rule is not generally followed. Hopefully all such drives are quarantined to their respective networks. (Personal drives only used with personal computers. NASA drives only with NASA computers.)
+  - A malicious entity could destroy the robot hardware by modifying low-level controllers for e.g., the motors or cooling systems.
   - For the IT department, the goal seems to be preventing anything from happening. If nothing happens then nothing bad happens. This approach is foolproof.
 - Countermeasures:
   - External software (e.g., Linux) is installed from NASA approved USB drives. I don't know how it got there, but that's not my fault. If my computer is compromised by this, then so is everyone else's, so the additional risk is negligible.
   - Internal software is installed from internal servers. Again, if these are compromised, then my computer isn't going to make things worse.
   - For some external software that is not hosted, I need to build it from source. Here I'm assuming that the software is not malicious, that the compiler I'm using is correct, and that the means of obtaining the software that I use is safe. The first assumption seems reasonable, because the software packages are widely used and the creators have no reason to expect them to be used at NASA. If the compiler provided by the USB stick is compromised, again I am not making things worse. The weakest point is probably my means of obtaining the software. I download it, comparing the hash against the reported hash for the download. This makes it unlikely that the software is compromised.
-  - In general, the theme here is "I'm not making things worse than they already are." This is a useful rule for figuring out what to worry about.
-
+  - To protect the robot hardware, all software is reviewed by at least three people before it is run on the robot. Additionally, the robot is not connected to the network while it runs. The damage that could be caused is fairly large (approximately 3 million dollars of hardware), but the probability that malicious code would make it past the inspection process and operate while not connected to a network seems small. Additionally, code for low-level controllers has a separate review process, safety systems are two-fault tolerant, and the robot is always run with a human read to press the E-stop.
+  - In general, the theme here is "I'm not making things worse than they already are." This is a useful reduction to avoid worrying about a variety of things.
+  - There are no known countermeasures to the IT department. They install a key logger and remote administration tool on your computer (and presumably other stuff, but they just say there is "no reasonable expectation of privacy."). If needed, I could send requests to the IT department to host executable for other software packages on the NASA network, but it seems easier to install them from source.
