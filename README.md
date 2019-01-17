@@ -25,14 +25,17 @@ please cut-and-paste the text from that email here.**
 - Scenario: **Grading**
 - Assumptions:
   - This is something that I actually do, so my assumptions will be the set of true propositions for COMP 382.
-  - Among these assumptions, we're assuming the grading platform is "as secure as it will get." This hold because I don't have influence over canvas. 
+  - Among these assumptions, we're assuming the grading platform is "as secure as it will get." This hold because I don't have influence over canvas.
+  - We are assuming that I can give impactful advice to the course instructor(s).
+  - We are assuming that (each/most) TAs will follow instructions.
 - Assets:
   - Approximately thirty undergrads and grad students with a passion for justice and a nose for illicit cooperation.
   - Approximately 8 hrs per week per TA (so 240 man hours per week).
+  - Each TA has a reasonably powerful computer and a decent understanding of the course material.
 - Threats:
   - Unscrupulous undergrads that want to pass a required class.
   - Inquisitive undergrads who want to see what they can get away with?
-  - Inconsistent grading caused by subjective factors.
+  - Inconsistent grading caused by subjective factors such as the handwriting being messy, the TA being tired, etc.
   - An obligation to respond to all emails complaining about the class.
 - Countermeasures:
   - Rather than assigning **n** assignments to each TA, give each TA **k x n** instances of problems to grade. Thus the grading is as consistent as possible across assignments (no assignment is entirely graded by one TA). This can be done easily with a software package.
@@ -40,7 +43,7 @@ please cut-and-paste the text from that email here.**
   - Have the TA's grade in random order to avoid subjective bias. (e.g., the first assignment may be graded more harshly on average.) The software package could present assignments in a random order.
   - Have the student's identity hidden from the TA's. The software package can hide the student's names. Other identifying information would be difficult to detect/remove.
   - Use a tool such as MOSS to detect plagiarism in code. This can be automated fairly easily for each assignment.
-  - Have some limit to students' regrade requests to prevent incessant emailing. This is hard to do in a fair, one-size-fits-all manner. Maybe have some possible penalty for regrading (e.g., can lose points or gain them) to discourage it.
+  - Have some limit to students' regrade requests to prevent incessant emailing. This is hard to do in a fair, one-size-fits-all manner. Maybe have some possible penalty for regrading (e.g., can lose points or gain them) to discourage it. The risk here is that such policies will discourage emails that should be sent.
   - Attempt to characterize problems into some small number of classes. Then have TA's communicate to attempt consistent grading and detect plagiarism. This is very hard to do in a robust way. Grades will probably have a fair amount of randomness due to subjective factors. Having enough assignments throughout the semester will hopefully cause the information to outweigh the noise.
 
 ## Problem 2
@@ -49,7 +52,7 @@ please cut-and-paste the text from that email here.**
   - With D1 schools spending up to 50 million dollars on their football teams in a given year, it seems evident that some people care about these teams a lot. The ultimate goal of each team is presumably to win the national championship game. We will assume that attempts to do this will not utilize resources on the nation-state level (e.g., satellites will not be used to spy on opposing teams' practices). We will not assume morality (i.e., we will assume that there is at least a small group of people that are happy to cheat to help a given team win.), but we will assume that there is no one willing to risk life in prison to hurt a given team (e.g., no assassination attempts).
 - Assets:
   - A small portion of the 50 million dollar budget. Let's say 5 million.
-  - A large staff, say 97 people not counting the players. We'll also assume we can hire a few new employees (say 3 people).
+  - A large staff, say 97 people not counting the players. We'll also assume we can hire a few new employees (say 3 people) who will have a working knowledge of technology and security.
 - Threats:
   - We'll use www.yourteamcheats.com to find common ways teams cheat and try to cover those. Additionally, we'll try to look at new ways teams could use technology to cheat:
   - Disqualification. Anything from academic probation to performance enhancing drug (PED) use can disqualify a player. NFL teams don't have academic probation, but PEDs have resulted in suspensions. While this would give some short-term benefit to our players, we will assume that the net result for our team is negative as such acts are likely to be detected and punished.
@@ -59,6 +62,7 @@ please cut-and-paste the text from that email here.**
   - To deal with disqualification, we will encourage "appropriate" behavior by having our players shadowed. Note that this is already done at major schools (players have individual "tutors" ensuring they attend class etc.) so it does not cost additional resources. Hopefully this also discourages PED use. We won't *actually* perform drug tests because we don't want to catch our players. We just hope they don't get caught by anyone.
   - To deal with taping, we would essentially need to prevent the use of electronics within the stadium. While we could use EMPs to destroy them, this would damage other systems and probably not be worth the cost. Instead, we can try to exclude non-team members from the stadium during practices and task a small number of team staff members to look for people holding cameras / phones during practice among the few people we do allow in the stadium. To deal with small cameras, we could assume they use common communication protocols and monitor for unusual signals. If these signals are detected, it should be possible to locate the source using a kalman filter or similar.
   - Placing radios in helmets would be difficult to detect, but again monitoring for unusual signals could detect this form of cheating.
+  - Perhaps the football team could encourage a networking or security lab at the school to do work on detecting malicious sensors/radios by monitoring wireless signals in an area. They could provide them with some funding and real-world test scenarios to support their research.
 
 ## Problem 3
 - Scenario: **Research on My Computer**
